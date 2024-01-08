@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Flutter iOS Doc</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Flutter iOS Documentation">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body class="docs-page">
+	<div id="myUL">
+    <header class="header fixed-top">	    
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none" type="button">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><span class="logo-text">Flutter<span class="text-alt">Docs</span></span></a></div>    
+                </div><!--//docs-logo-wrapper-->
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+	                <div class="top-search-box d-none d-lg-flex">
+		                <form class="search-form">
+				            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+				            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+				        </form>
+	                </div>
+	
+					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+						
+		            </ul><!--//social-list-->
+		           
+	            </div><!--//docs-top-utilities-->
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    
+    <div class="docs-wrapper">
+	    <div id="docs-sidebar" class="docs-sidebar">
+		    <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+		            <input type="text" placeholder="Search the docs..." onkeyup="myFunction()" id="myInput" name="search" class="form-control search-input">
+		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+		        </form>
+            </div>
+		    <nav id="docs-nav" class="docs-nav navbar">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+				    <li class="nav-item section-title"><a class="nav-link scrollto" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Flutter Dependency</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Flutter Basic Setup</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Flutter Setup for Push Notifications</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-22">Flutter Handle Deeplink</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Flutter setup for App Inbox</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">Flutter setup for Nudges</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-5">Flutter User & Event Tracking</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-6">GDPR Opt-in & Opt-out</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Native Dependency for Notifications</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Flutter Setup - Native</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Initialize Push Notifications and InApp messages</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Configuring Rich Media and Carousel Notification</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-299">Enable CEE logs</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder me-2"><i class="fas fa-box"></i></span>App Inbox Integration</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Complete basic setup</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Add CEE-AppInbox dependency</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">App Inbox UI</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder me-2"><i class="fas fa-cogs"></i></span>Product Experience</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Add SmartechPxWidget</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Add PxNavigationObserver</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">Setting up page load events</a></li>
+				    
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">Setting up Test Device</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">Updating Capabilities</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-3">User Tracking for Nudges</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-3">Event Listener</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-1">Defining Actions & Handling Deeplinks</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-2">Using existing analytics partners</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-3">Handling Invisible Containers</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="item-295">Enable PX logs</a></li>
+					<!--
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span class="theme-icon-holder me-2"><i class="fas fa-laptop-code"></i></span>Web</a></li>
+				    
+				    <li class="nav-item"><a class="nav-link scrollto" href="item-295">Section Item 6.2</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-3">Section Item 6.3</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-7"><span class="theme-icon-holder me-2"><i class="fas fa-tablet-alt"></i></span>Mobile</a></li>
+				    
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-2">Section Item 7.2</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-3">Section Item 7.3</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span class="theme-icon-holder me-2"><i class="fas fa-book-reader"></i></span>Resources</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-1">Section Item 8.1</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-2">Section Item 8.2</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-3">Section Item 8.3</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Section Item 9.1</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">Section Item 9.2</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-3">Section Item 9.3</a></li>
+					-->
+			    </ul>
+
+		    </nav><!--//docs-nav-->
+	    </div><!--//docs-sidebar-->
+	    <div class="docs-content">
+		    <div class="container">
+			    <article class="docs-article" id="section-1">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Flutter iOS Steps <span class="docs-time">Last updated: 2023-12-20</span></h1>
+					    <section class="docs-intro">
+						    <p>CEE provides a Flutter SDK that enables app developers to track and engage their users and view valuable analytical insights on our powerful CEE dashboard.
+<br>
+								This guide will show you how to install the CEE Flutter SDK in your Flutter project.</p>
+						</section><!--//docs-intro-->
+						
+						
+						
+						
+				    </header>
+				    <section class="docs-section" id="item-1-1">
+						<h5>Installing CEE Flutter Base Plugin</h5>
+						<p>Implement base and SmarTech plugin in<code> pubspecs.yaml</code> file under dependencies:</p>
+
+						<code>smartech_base: ^3.2.8</code>
+						<div class="docs-code-block">
+							<!-- ** Embed github code starts ** -->
+							<p>Below is the code for reference</p>
+							<script src="https://gist.github.com/lolbidoll/ae836b0ad20c948a7bae26645fcc2995.js"></script>
+							<!-- ** Embed github code ends ** -->
+						</div><!--//docs-code-block-->
+						
+						<!--//docs-code-block-->
+					</section>
+					
+					<section class="docs-section" id="item-1-2">
+						<h5>Installing CEE Flutter Plugin for notifications</h5>
+						<p>Implement SmarTech plugin in<code> pubspecs.yaml</code> file under dependencies:</p>
+
+						<code>smartech_push: ^3.2.8</code>
+						<div class="docs-code-block">
+							<!-- ** Embed github code starts ** -->
+							<p>Below is the code for reference</p>
+							<script src="https://gist.github.com/lolbidoll/ae836b0ad20c948a7bae26645fcc2995.js"></script>
+							<!-- ** Embed github code ends ** -->
+						</div><!--//docs-code-block-->
+						
+						<!--//docs-code-block-->
+					</section><!--//section-->
+					
+
+					<section class="docs-section" id="item-1-22">
+						<h5>Flutter Handle Deeplink</h5>
+						<p>To Handle deeplink with exposing payload use below method in your main function. Use the below method if smartech_base plugin version is >= 3.2.7</p>
+
+						<div class="docs-code-block">
+							<!-- ** Embed github code starts ** -->
+							<p>Below is the code for reference</p>
+							<script src="https://gist.github.com/lolbidoll/d6583f884e8e83076b52a3466da1717e.js"></script>
+							<!-- ** Embed github code ends ** -->
+						</div><!--//docs-code-block-->
+						
+						<!--//docs-code-block-->
+					</section><!--//section-->
+
+
+					<section class="docs-section" id="item-1-3">
+						<h5>Installing Flutter Plugin for App Inbox</h5>
+						<p>Implement SmarTech plugin in<code> pubspecs.yaml</code> file under dependencies:</p>
+
+						<code>smartech_appinbox: ^3.2.7</code>
+						<div class="docs-code-block">
+							<!-- ** Embed github code starts ** -->
+							<p>Below is the code for reference</p>
+							<script src="https://gist.github.com/lolbidoll/ae836b0ad20c948a7bae26645fcc2995.js"></script>
+							<!-- ** Embed github code ends ** -->
+						</div><!--//docs-code-block-->
+						
+					</section><!--//section-->
+						
+					<section class="docs-section" id="item-1-4">
+						<h5>Installing Flutter Plugin for Nudges</h5>
+						<p>Implement SmarTech plugin in<code> pubspecs.yaml</code> file under dependencies:</p>
+
+						<code>smartech_nudges: ^1.1.0</code>
+						<div class="docs-code-block">
+							<!-- ** Embed github code starts ** -->
+							<p>Below is the code for reference</p>
+							<script src="https://gist.github.com/lolbidoll/ae836b0ad20c948a7bae26645fcc2995.js"></script>
+							<!-- ** Embed github code ends ** -->
+						</div><!--//docs-code-block-->
+					</section><!--//section-->
+					<section class="docs-section" id="item-1-5">
+						<h2 class="section-heading">Flutter User & Event Tracking</h2>
+						<p>
+							CEE SDK allows you to track user behavior and build rich user profiles which then can be used to create segments & target them with personalized communication.<br>
+
+Based on your use cases, please follow the steps to get started with user tracking and events tracking.<br>
+
+Please ensure that you have done base SDK integration
+						</p>
+						<div class="callout-block callout-block-info">
+                            
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-info-circle"></i>
+		                            </span><!--//icon-holder-->
+	                                Note
+	                            </h4>
+                                <p>
+									<ul>
+										<li>Smartech supports following data types - String, Integer, Float, Date.</li>
+										<li>Date should be sent as yyyy-mm-dd format.</li>
+									</ul>
+								</p>
+                            </div><!--//content-->
+                        </div><br>
+
+						<br>
+						<h5>1. Building User Profile</h5>
+						<p>You can pass additional information associated with a user to Smartech as user attributes as shown below.</p>
+						<script src="https://gist.github.com/lolbidoll/e954feb63cf20e21979049cdc8a1a206.js"></script>
+					
+					<br>
+					<h5>2. Login Event</h5>
+					<p>Call Smartech login method as soon as user successfully login into the app and also set user’s identity before calling the login method of SDK.</p>
+					<script src="https://gist.github.com/lolbidoll/bacc10731277d1fead5e0996ab2b7573.js"></script>
+					<br>
+				
+					<h5>3. Logout Event</h5>
+					<p>Call the Smartech logout method after the user log-out from the application. If you want to clear the user identity pass true in the parameter. When you logout the user with identity clear, you won't be receiving any personalized push notifications</p>
+					<script src="https://gist.github.com/lolbidoll/4a1f98e2d9fbf94f8f6bfe3fef6e23af.js"></script>
+				<br>
+				<h5>4. Identifying users</h5>
+				<p>Use the below method to set a user’s identity. In case the user’s identity is not available at login, you can also use this method after the identity is available.</p>
+				<script src="https://gist.github.com/lolbidoll/6a1749b21f1bce3d5335ba402910ac4d.js"></script>	
+			<br>
+			<h5>5. Clear Identity</h5>
+			<p>This will clear the user’s identity and after this, all activity will be tracked as anonymous.</p>
+			<script src="https://gist.github.com/lolbidoll/35dd6b23daee5b9ec97a2459d5ff9833.js"></script>
+			<br>
+			<h5>6. Custom Event Tracking</h5>
+			<p>This method is used to track custom events that are defined by the client, to which you can analyze users' usage patterns of the product. Each event must have a name and a set of attributes describing more about the event in detail.</p>
+		    <script src="https://gist.github.com/lolbidoll/bd6fff9132a84828aa52fd1bc916326c.js"></script>
+		<br>
+		<h5>7. Location Tracking</h5>
+
+		<p>You can track user's location or set it yourself by following the below steps.</p>
+		<script src="https://gist.github.com/lolbidoll/39c686b3dd6846635db19756c87faf1e.js"></script>
+	<br>
+	</section><!--//section-->
+					<section class="docs-section" id="item-1-6">
+						<h2 class="section-heading">GDPR Opt-in & Opt-out</h2><br>
+					<h5>Opt for tracking</h5>
+					<script src="https://gist.github.com/lolbidoll/b6a19e02ca66b4260e0046871ed74376.js"></script>
+					<br>
+				<h5>Opt For Push Notifications</h5>
+				<script src="https://gist.github.com/lolbidoll/e8ee382eed13c4d53832b5a390ae08cd.js"></script>
+				<br>
+				<h5>Opt For In-App Messages</h5>
+				<script src="https://gist.github.com/lolbidoll/ecb29e41641311d3c02d13b33d30d573.js"></script>
+			<br>	
+			</section><!--//section-->
+					
+			    </article>
+			    
+			    <article class="docs-article" id="section-2">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Flutter-Native Dependency</h1>
+					    <section class="docs-intro">
+						    <p>Please follow below document to make Native side changes for your flutter project</p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-2-1">
+						<h2 class="section-heading">Flutter Setup - Native</h2>
+
+						<div class="callout-block callout-block-info">
+                            
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-info-circle"></i>
+		                            </span><!--//icon-holder-->
+	                                Note
+	                            </h4>
+                                <p>
+									<ul>
+										<li>Support iOS version 10 and above</li>
+										<li>Your project must have been integrated with CocoaPods. If you do not have Cocoapods installed already, follow <a href="https://guides.cocoapods.org/using/getting-started.html">these</a> instructions on the Cocoapods website to install it.</li>
+									</ul>
+								</p>
+                            </div><!--//content-->
+                        </div>
+						<h2>Step 1: Initialize CEE SDK</h2><br>
+						<h5>- Import CEE SDK in AppDelegate class and call a method to initialize CEE SDK in the didFinishLaunchingWithOptions method of the AppDelegate class</h5>
+						<div class="row my-3">
+                        <div class="col-md-6 col-12">
+                                <ul class="list list-unstyled pl-0">
+                                    <li><p>Obejctive C</p><br><script src="https://gist.github.com/lolbidoll/60c4568eb1389d26372f283a0f18e855.js"></script></li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <ul class="list list-unstyled pl-0">
+                                    <li><p>Swift</p><br><script src="https://gist.github.com/lolbidoll/01f9ee8bbe76934fce3a6cb19186e9f5.js"></script></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+						<h5> - Configure Apps Info.plist with SmartechKeys</h5>
+						<p>You need to add a key named <code>SmartechKeys</code> with type Dictionary. Add the following keys and values with their types to the <code>SmartechKeys</code></p>
+						<div class="table-responsive my-4">
+							<table class="table table-striped table-bordered">
+								<thead>
+									<tr>
+										<th scope="col">Key</th>
+										<th scope="col">Datatype</th>
+										<th scope="col">Description</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">SmartechAppGroup</th>
+										<td>String</td>
+										<td>The app group that is selected in capabilities section. It is used to share data between App and Extensions.</td>
+										
+									</tr>
+									<tr>
+										<th scope="row">SmartechAppId</th>
+										<td>String</td>
+										<td>The app id received from Smartech panel under assets section.
+											To get Smartech App ID, <a href="https://cedocs.netcorecloud.com/docs/smartech-panel-id" >click here</a></td>
+									
+									</tr>
+									<tr>
+										<th scope="row">SmartechUseAdvId</th>
+										<td>Boolean</td>
+										<td>This key decides whether to use ADID (Advertising Id) or not. Set value as true/false as per the requirement.</td>
+									
+									</tr>
+									<tr>
+										<th scope="row">SmartechAutoFetchLocation</th>
+										<td>Boolean</td>
+										<td>This key decides whether you want to automatically send the location with all the events or not. Set value as true/false as per the requirement.</td>
+									
+									</tr>
+								</tbody>
+							</table>
+						</div><!--//table-responsive-->
+						<p>You can paste the following snippet in Info.plist of your app and set the appropriate values for the keys.</p>
+						<script src="https://gist.github.com/lolbidoll/5840dc93c75d0b8717266a10d8c252b6.js"></script>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-2-2">
+						<h2 class="section-heading">Initialize Push Notifications and InApp messages</h2>
+						<h5>1. Import SmartPush SDK in AppDelegate class.</h5>
+						<div class="row my-3">
+							<div class="col-md-6 col-12">
+									<ul class="list list-unstyled pl-0">
+										<li><p>Obejctive C</p><br>
+												<code>#import &lt;SmartPush/SmartPush.h&gt;</code></li>
+										</li>
+										
+									</ul>
+								</div>
+								<div class="col-md-6 col-12">
+									<ul class="list list-unstyled pl-0">
+										<li><p>Swift</p><br>
+											<code>import SmartPush</code></li>
+									</li>
+									</ul>
+								</div>
+							</div><br>
+
+
+						<h5>2. Register For Remote Notifications</h5>
+						<p>In order to receive push notifications you need to send the device token you received in method didRegisterForRemoteNotificationsWithDeviceToken to CEE . Refer the following code:</p>
+						
+						<div class="row my-3">
+							<div class="col-md-6 col-12">
+									<ul class="list list-unstyled pl-0">
+										<li><p>Obejctive C</p><br>
+											<script src="https://gist.github.com/lolbidoll/c97e40beee60b13f7c5b5f0ce71b10d0.js"></script>
+										</li>
+										
+									</ul>
+								</div>
+								<div class="col-md-6 col-12">
+									<ul class="list list-unstyled pl-0">
+										<li><p>Swift</p><br>
+											<script src="https://gist.github.com/lolbidoll/7955d394a04fa751ecc769c39f7594e8.js"></script>
+									</li>
+									</ul>
+								</div>
+							</div>
+
+							<h5>3. Implementation of UNUserNotificationCenterDelegate methods</h5>
+
+							<p>Implement the following code in delegate methods of UNUserNotificationCenter. First import following frameworks provided by apple for UNUserNotificationCenterDelegate</p>
+							<p>Confirm UNUserNotificationCenterDelegate in AppDelegate class</p>
+							<div class="row my-3">
+								<div class="col-md-6 col-12">
+										<ul class="list list-unstyled pl-0">
+											<li><p>Obejctive C</p><br>
+													<code>#import &lt;UserNotifications/UserNotifications.h&gt;</code></li><br>
+													<code>#import &lt;UserNotificationsUI/UserNotificationsUI.h&gt;</code>
+											</li>
+											
+										</ul>
+									</div>
+									<div class="col-md-6 col-12">
+										<ul class="list list-unstyled pl-0">
+											<li><p>Swift</p><br>
+												<code>import UserNotifications</code></li><br>
+												<code>import UserNotificationsUI</code>
+										</li>
+										</ul>
+									</div>
+								</div><br>
+
+								<div class="row my-3">
+									<div class="col-md-6 col-12">
+											<ul class="list list-unstyled pl-0">
+												<li><p>Obejctive C</p><br>
+													<script src="https://gist.github.com/lolbidoll/3b1d177a4d5f5748297c79e8274ea5da.js"></script>
+												</li>
+												
+											</ul>
+										</div>
+										<div class="col-md-6 col-12">
+											<ul class="list list-unstyled pl-0">
+												<li><p>Swift</p><br>
+													<script src="https://gist.github.com/lolbidoll/37f5f79b9b071b43c78c824c13219071.js"></script>
+											</li>
+											</ul>
+										</div>
+									</div>
+
+									<h5>4. Set Notification Options</h5>
+
+									<p>CEE SDK has a default method that sets the notification options with options Sound, Alert, Badge. For that, you need to call the method registerForPushNotificationWithDefaultAuthorizationOptions in AppDelegate class.</p>
+									<div class="row my-3">
+										<div class="col-md-6 col-12">
+												<ul class="list list-unstyled pl-0">
+													<li><p>Obejctive C</p><br>
+														<script src="https://gist.github.com/lolbidoll/efaaf8635d33354c1d076042a439b63e.js"></script>
+													</li>
+													
+												</ul>
+											</div>
+											<div class="col-md-6 col-12">
+												<ul class="list list-unstyled pl-0">
+													<li><p>Swift</p><br>
+														<script src="https://gist.github.com/lolbidoll/18dea45a72969255275a16eab62a0bbf.js"></script>
+												</li>
+												</ul>
+											</div>
+										</div>
+										<h5>5. Retrieving Deeplink Data</h5>
+
+										<div class="row my-3">
+											<div class="col-md-6 col-12">
+													<ul class="list list-unstyled pl-0">
+														<li><p>Obejctive C</p><br>
+															<script src="https://gist.github.com/lolbidoll/1c66a974f4df36d3243473af9e7461b4.js"></script>
+														</li>
+														
+													</ul>
+												</div>
+												<div class="col-md-6 col-12">
+													<ul class="list list-unstyled pl-0">
+														<li><p>Swift</p><br>
+															<script src="https://gist.github.com/lolbidoll/4b7576a6e301d3128a510243ab601c06.js"></script>
+													</li>
+													</ul>
+												</div>
+											</div>
+											<h2 class="section-heading">Complete AppDelegate code</h2><br>
+						<div class="row my-3">
+							<div class="col-md-6 col-12">
+									<ul class="list list-unstyled pl-0">
+										<li><p>Obejctive C</p><br>
+											<script src="https://gist.github.com/lolbidoll/f4cbdf3ef76370d6d13c496450a0b7f2.js"></script>
+										</li>
+										
+									</ul>
+								</div>
+								<div class="col-md-6 col-12">
+									<ul class="list list-unstyled pl-0">
+										<li><p>Swift</p><br>
+											<script src="https://gist.github.com/lolbidoll/4d8cc6c4689ed5a04aa48c86fea0349d.js"></script>
+									</li>
+									</ul>
+								</div>
+							</div>
+					</section><!--//section--><br>
+					
+					<section class="docs-section" id="item-2-3">
+						
+						<h2 class="section-heading">Configuring Rich Media and Carousel Notification</h2><br>
+
+						<h5>1. Adding Service Extension</h5>
+
+						<p>Notification Service Extension is used to display media notifications like Image, Video, Audio, and Gif sent from CEE .</p>
+						<ul>
+							<li>In your Xcode go to menu File > New > Target > Select Notification Service Extension.</li>
+							<li>Click the Next button and fill in the Product Name. Throughout this document, we are using SmartechNSE as the example Product Name.</li>
+							<li>Click the Finish button.</li>
+							<li>Set the deployment target to 10.0 or above.</li>
+							<li>You need to create a different Bundle Identifier and provisioning profile for this extension. For example ‘com.CompanyName.ProductName.ProductNameServiceExtension’</li>
+						</ul>
+
+						<h5>2. Adding Content Extension</h5>
+						<p>Notification Content Extension is used only to display carousel notifications sent from CEE .</p>
+						<ul>
+							<li>In your Xcode go to menu File > New > Target > Select Notification Content Extension.</li>
+							<li>Click the Next button and fill in the Product Name, here in the example we are using SmartechNCE.</li>
+							<li>Click the Finish button</li>
+							<li>Set the deployment target to 10.0 or above.</li>
+							<li>You need to create a different Bundle Identifier and provision profile for this extension. For example ‘com.CompanyName.ProductName.ProductNameContentExtension’</li>
+						</ul>
+						<div class="callout-block callout-block-info">
+                            
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-info-circle"></i>
+		                            </span><!--//icon-holder-->
+	                                Note
+	                            </h4>
+                                <p>
+									<ul>
+										<li>Make sure you add App Transport Security Settings with Allow Arbitrary Loads as YES in Info.plist of App, Service Extension and Content Extension to support Http calls.</li>
+										<li>App Groups must be same between App, Service Extension, and Content Extension.</li>
+									</ul>
+								</p>
+                            </div><!--//content-->
+                        </div><br>
+						<h5>3. Configuring App Capabilities</h5>
+						<p>For CEE SDK to work in your project you need to enable below app capabilities in your main app.</p>
+						<p>App Groups - Enable/Add and select a valid App Group for your app. This is used by App, Service Extension and Content Extension to access data as all three are different targets
+							You can refer to the below PDF for detailed steps to enable app capabilities in your main app and extensions, refer <a href="https://drive.google.com/open?id=1AOVTb9znt871Nq1esmZvXzssu4-Eod3X" target="_blank">here</a></p><br>
+						<h5>4. Configuring Service Extensions Info.plist</h5>
+						<p>You need to add a key named SmartechKeys with type Dictionary. In it add the following keys and values with its types.</p>
+						<div class="table-responsive my-4">
+							<table class="table table-striped table-bordered">
+								<thead>
+									<tr>
+										<th scope="col">Key</th>
+										<th scope="col">Datatype</th>
+										<th scope="col">Description</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">SmartechAppGroup</th>
+										<td>String</td>
+										<td>The app group that is selected in capabilities section. It is used to share data between App and Extensions.</td>
+										
+									</tr>
+									<tr>
+										<th scope="row">SmartechAppId</th>
+										<td>String</td>
+										<td>The app id received from Smartech panel under assets section.
+											To get Smartech App ID, <a href="https://cedocs.netcorecloud.com/docs/smartech-panel-id" >click here</a></td>
+									
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+						<p>Following is the source code snippet of service extensions Info.plist for key SmartechKeys:</p>
+						
+						<script src="https://gist.github.com/lolbidoll/665889a5cc7aedfbfca1e9a93952fbd8.js"></script>
+						<br>
+						<h5>5. Configuring Service Extension with CEE SDK</h5>
+						<p>You need to perform the following changes in the Notification Service Extension's NotificationService class.</p>
+						<p>Create an object of SMTNotificationServiceExtension and call the methods</p>
+						<div class="row my-3">
+							<div class="col-md-6 col-12">
+									<ul class="list list-unstyled pl-0">
+										<li><p>Obejctive C</p><br>
+											<p>Below code to be added in <code>NotificationService.m</code> file</p>
+											<script src="https://gist.github.com/lolbidoll/d7cabed7450cb36fb3b79b1db97248ce.js"></script>
+										</li>
+										<li>
+											<p>Below code to be added in <code>NotificationService.h</code> file</p>
+											<script src="https://gist.github.com/lolbidoll/2e831be3bc053ffffe92a957ceac9cd0.js"></script>
+										</li>
+										
+									</ul>
+								</div>
+								<div class="col-md-6 col-12">
+									<ul class="list list-unstyled pl-0">
+										<li><p>Swift</p><br>
+											<script src="https://gist.github.com/lolbidoll/67a02e9e608ab07feba9c782e0172825.js"></script>
+									</li>
+									</ul>
+								</div>
+							</div>
+						<br>
+						<h5>6. Configuring Content Extensions Info.plist</h5>	
+
+						<p>You need to add a key named SmartechKeys with type Dictionary. In it add the following key and value with its type.</p>
+						
+						<div class="table-responsive my-4">
+							<table class="table table-striped table-bordered">
+								<thead>
+									<tr>
+										<th scope="col">Key</th>
+										<th scope="col">Datatype</th>
+										<th scope="col">Description</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">SmartechAppGroup</th>
+										<td>String</td>
+										<td>The app group that is selected in capabilities section. It is used to share data between App and Extensions.</td>
+										
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+						<p>Following is the source code snippet of content extensions Info.plist for key SmartechKeys:</p>
+						<script src="https://gist.github.com/lolbidoll/e6aee1caa593bdc1b612f092ff2b04f3.js"></script>
+						<br>
+						<h5>7. Configuring Content Extension with CEE SDK</h5>
+
+						<p>Replace the following code in your NotificationViewController class</p>
+
+						<div class="row my-3">
+							<div class="col-md-6 col-12">
+									<ul class="list list-unstyled pl-0">
+										<li><p>Obejctive C</p><br>
+											<p>Below code to be added in <code>NotificationViewController.h</code> file</p>
+											<script src="https://gist.github.com/lolbidoll/d91a7258279d35e0b18e6809d578857d.js"></script><br>
+											<p>Below code to be added in <code>NotificationViewController.m</code> file</p>
+											<script src="https://gist.github.com/lolbidoll/c9765bf96cc026f51cb0e8c37c831935.js"></script>
+										</li>
+										
+									</ul>
+								</div>
+								<div class="col-md-6 col-12">
+									<ul class="list list-unstyled pl-0">
+										<li><p>Swift</p><br>
+											<script src="https://gist.github.com/lolbidoll/95798e503e0ed07954351c2c93332c13.js"></script>
+									</li>
+									</ul>
+								</div>
+							</div>
+
+						<h5>8. Storyboard changes in your Content Extension</h5>
+<br>
+						<a href="https://drive.google.com/file/d/1J6qJ4BYGBEqPKzH0AutLkDlsSTzmHmr-/view?usp=sharing" class="btn btn-primary" target="_blank">Click Me for storyboard changes</a><br>
+						
+						<h5>9. Changes in Content Extensions Info.plist under NSExtension -> NSExtensionAttributes</h5>
+						<ul>
+							<li>Change the UNNotificationExtensionCategory datatype with Array in which it will be consisted of 3 values :
+								<ul>
+									<li>
+										Item 0 will be of type String with value SmartechCarouselLandscapeNotification
+									</li>
+									<li>
+										Item 1 will be of type String with value SmartechCarouselPortraitNotification
+									</li>
+									<li>
+										Item 2 will be of type String with value SmartechPN.
+									</li>
+								</ul>
+							</li>
+							<li>
+								Add the UNNotificationExtensionDefaultContentHidden key with Boolean value YES.
+							</li>
+							<li>
+								Add the UNNotificationExtensionUserInteractionEnabled key with Boolean value YES.
+							</li>
+							<li>
+								Add the UNNotificationExtensionInitialContentSizeRatio key with Number 0.25.
+							</li>
+						</ul>
+						<br>
+						<p>By default, the Custom Push Notifications do not display the App Icon when expanded, unlike the default push notifications. To enable the App Icon visibility in the Custom Push Notifications, you must include the following steps:</p>
+					<ul>
+						<li>
+							Add your App Icon in your Asset of Content Extension.
+						</li>
+						<li>
+							In your Content Extensions Info.plist under SmartechKeys, add the SmartechNotificationIcon key with String value containing the name of the App Icon.
+						</li>
+						<li>
+							The SDK will check for the SmartechNotificationIcon and render the UI. In case the icon is not passed or not found, then the notification will render, taking up the space of the icons.
+						</li>
+					</ul>
+					<br>
+					<b>Option 2: Configuring Content Extension via New Content Extension</b>
+					<p>
+						In case other vendors/customers use custom push notifications, then to co-exist, you will need to add a new Notification Content Extension and follow the same steps explained above.
+					</p>
+					<h5>10. Changes in pod file</h5>
+					<p>Add SmartePush framework for NSE and NCE</p>
+					<script src="https://gist.github.com/lolbidoll/a88f1ce084b1e8f969c15347a6678637.js"></script><br>
+					</section><!--//section-->
+					<section class="docs-section" id="item-299">
+						<h2>Enable CEE logs</h2><br>
+						<h5>1. Enable CEE logs</h5>
+						<p>please add below code in didFinishLaunchingWithOptions method of AppDelegate class</p>
+						<div class="row my-3">
+							<div class="col-md-6 col-12">
+									<ul class="list list-unstyled pl-0">
+										<li><p>Obejctive C</p><br>
+											<script src="https://gist.github.com/lolbidoll/71b782337c0da017353617227def4c5f.js"></script>
+										</li>
+										
+									</ul>
+							</div>
+								<div class="col-md-6 col-12">
+									<ul class="list list-unstyled pl-0">
+										<li><p>Swift</p><br>
+											<script src="https://gist.github.com/lolbidoll/4321cdd478dc8a26481adcf193634b95.js"></script>
+									</li>
+									</ul>
+								</div>
+						</div>
+					</section>
+			    </article><!--//docs-article-->
+			    
+			    
+			    <article class="docs-article" id="section-3">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">App Inbox Integration</h1>
+					    <section class="docs-intro">
+						    <p>App inbox is essentially a screen within an app where all your notifications will be listed. App inbox offers you a way to make your push notifications persistent that users can refer back at any point.</p>
+							<div class="callout-block callout-block-success">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-thumbs-up"></i>
+										</span><!--//icon-holder-->
+										Tip
+									</h4>
+									<p><b>Read more about how app inbox feature works <a href="https://cedocs.netcorecloud.com/docs/app-inbox" target="_blank">here</a>. And reach out to your account manager to enable this feature.</b></p>
+								</div><!--//content-->
+							</div>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-3-1">
+						<h2 class="section-heading">Step 1: Complete the setup for CEE and SmartPush SDK for Flutter</h2>
+						<p>Complete the Basic setup for Flutter and Native dependencies.</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-3-2">
+						<h2 class="section-heading">Step 2: Add CEE-AppInbox SDK dependency</h2>
+						<p>Please add AppInbox dependency at flutter end</p>
+					
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-3-3">
+						<h2 class="section-heading">Step 3: App Inbox UI Integration</h2>
+						<p>CEE App Inbox SDK offers two options to create and manage the UI for app inbox screen for the app.</p>
+						<ul>
+							<li>
+								Custom UI that can you can create with SDK methods given below.
+							</li>
+						</ul>
+						<h5>1. Custom App Inbox UI Implementation</h5>
+						<p>You can also create a custom Inbox UI using our SDK method to fetch data and display it inside your app.</p>
+						<h5>2. Get Inbox Messages</h5>
+						<p>To fetch data of app inbox messages from our Server, you can use the method below:
+							It has 3 values (optional)</p>
+						<ul>
+							<li>
+								<p><b>messageLimit</b> - Count of records of notification. E.g. 10</p>
+							</li>
+							<li>
+								<p><b>categoryList</b> - Fetching data based on the app inbox categories provided by the user.</p>
+							</li>
+							<li>
+								<p><b>smtInboxDataType: </b>It's a string that has 3 values all, latest, and earliest.</p>
+							</li>
+						</ul>
+					<p>You will get following possible values of status key in response for each App Inbox messages:
+						"sent", "delivered", "viewed", "clicked", "dismissed"</p>
+					<p>You will get following possible values of <b>ActionButton.callToAction</b> key in response:
+						"copy", "deeplink", "dismiss", "reply", "snooze"</p>
+
+						<script src="https://gist.github.com/lolbidoll/6f7da9b8e2d55935331582b75c979b88.js"></script>
+
+						<h5>3. Fetching data from DB</h5>
+						<p>You can use the below method to fetch the data from the database and it can be also used to show data in an offline state.</p>
+						<script src="https://gist.github.com/lolbidoll/2b211e4d0deef082d558927e4d3b4b7a.js"></script>
+					
+					<h5>Category based data</h5>
+
+					<p>Every AppInbox Message belongs to a specific category and we can use this data to create a dropdown on the menu to display the list of available categories to users.</p>
+					<p>The below method can be used to get a list of available categories.</p>
+					<script src="https://gist.github.com/lolbidoll/0b0468cdecfe761baef56bb35a488f83.js"></script>
+				<p>The below method can be used to filter the AppInbox messages list based on the category selected by the user. It takes an ArrayList of strings as a parameter.</p>
+				<ul>
+					<li>
+						<p><b>categoryList</b> - Fetching data based on the app inbox categories provided by the user. (optional)</p>
+					</li>
+				</ul>
+				<script src="https://gist.github.com/lolbidoll/156b181f07bd267dd963094430046dc0.js"></script>
+			<h5>AppInbox Message Count</h5>
+			<p>To show the count of all, read and unread messages, we can call the below method to get their respective count.</p>
+			
+		<p>This method accepts smtAppInboxMessageType as a parameter.</p>
+		<p><b>smtAppInboxMessageType</b> is a string. It has 3 values. (optional)<br>
+			<b>inbox</b> - Get count of both read and unread messages from DB. (default value)<br>
+			<b>read</b>- Get count of only read messages from DB.<br>
+			<b>unread</b> - Get count of only unread messages from DB.</p>
+
+			<script src="https://gist.github.com/lolbidoll/1e22981569ec084320570326ffb42e40.js"></script>
+		<br>
+		<h5>Capturing App Inbox user events</h5>
+		<p>You also need to send Viewed, Clicked and Dismissed events to SDK for every action performed on the AppInbox message by the user.</p>
+	<b>Viewed</b>	
+	<p>Send this event once the AppInbox message is visible to the user and It should be sent only one time for each AppInbox message. This method accepts the payload of the AppInbox message as a parameter.</p>
+	<script src="https://gist.github.com/lolbidoll/c4e9fa16ff774d64138c763ae38fe341.js"></script>
+<br>
+<b>Clicked</b>	
+<p>Onclick of AppInbox message, you need to send this event to SDK. This method takes 2 parameters that are deeplink and payload of AppInbox message.</p>
+<script src="https://gist.github.com/lolbidoll/462426f99bed31cb2eccdb99dd69888d.js"></script>
+<br>
+<b>Dismissed</b>
+<p>You can use this method to mimic the feature of swipe to delete the messages from your Recyclerview. You need to manually remove the message from the recycler view and next time when you will fetch the data from the DB, this message will be not present.</p>
+<script src="https://gist.github.com/lolbidoll/b976b172bf5bb6b7d878c482c350692d.js"></script>
+</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    <article class="docs-article" id="section-4">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Product Experience</h1>
+					    <section class="docs-intro">
+						    <p>Begin setting up your Flutter app's Product Experience!.</p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-4-1">
+						<h2 class="section-heading">1. Add SmartechPxWidget as topmost widget</h2>
+						<p>Wrap your topmost class of application widget(MaterialApp/ CupertinoApp/ WidgetsApp) with SmartechPxWidget in your main.dart file of your project.</p>
+						<script src="https://gist.github.com/lolbidoll/96e38444a5ba84e0127878f3cc72bef7.js"></script>
+					<br>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-4-2">
+						<h2 class="section-heading">2. Add PxNavigationObserver in properties of MaterialApp</h2>
+						<p>Add PxNavigationObserver.instance as property of navigatorObserver (Property of MaterialApp/ CupertinoApp/ WidgetsApp)</p>
+						<script src="https://gist.github.com/lolbidoll/954ffc64dab4ebcb440d25cbb5a5232b.js"></script>
+					<br>
+					<p>If the Customer is using MaterialApp.router as main widget. Then PxNavigation Observer should be declared in Go Router of the app.</p>
+					<script src="https://gist.github.com/lolbidoll/b6704469f09fc20d4a06c9dcd1d262b8.js"></script>
+				</section><!--//section-->
+					
+					<section class="docs-section" id="item-4-3">
+						<h2 class="section-heading">Setting up page load events</h2>
+						<p>You may use page load/page view events as triggers for Display Product Experience. To reliably use these events as triggers, ensure that your event is fired post rendering the screen.
+							<br>Use the following code snippet to fire page load events in the right methods.</p>
+							<div class="callout-block callout-block-warning">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-bullhorn"></i>
+										</span><!--//icon-holder-->
+										Page load events for dynamic screens
+									</h4>
+									<p>In case if the App needs to make an API call to fetch the data before rendering the screen, then please trigger the page load once the API call returns and the screen is completed rendered. You can alternatively add delay duration from the Smartech PX dashboard.</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+							<script src="https://gist.github.com/lolbidoll/95c8bba288d564f45c7bae17b5055adb.js"></script>
+						<br>
+						<div class="callout-block callout-block-warning">
+							<div class="content">
+								<p class="callout-title">
+									<span class="callout-icon-holder me-1">
+										<i class="fas fa-bullhorn"></i>
+									</span><!--//icon-holder-->
+									Smartech PX requires page load events to be fired only post rendering the Screen. This is to ensure that the anchored product experience are placed against the right view. You can alternatively add delay duration from the Hansel dashboard.
+								</p>
+								<p>Note - If used incorrectly, anchored nudges may be skipped when the Screen / Widget has not been rendered</p>
+							
+							</div><!--//content-->
+						</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    <article class="docs-article" id="section-5">
+				   
+				     <section class="docs-section" id="item-5-1">
+						<h2 class="section-heading">Setting up Test Device</h2>
+						<p>Product Experience dashboard lets you create Test Devices for your iOS devices. Devices that are a part of your Test Devices will receive changes made on PX panel immediately. For all other devices, the data is cached locally to provide high availability.</p>
+						<p>Hansel lets you create Test Devices for your iOS apps. Devices that are part of Test Devices will receive the updated value of configs immediately. On all other devices, the configs are cached locally for high availability.
+<br>
+							Adding devices to Test Devices also comes in handy when you want to preview features and changes before you release them to production.</p>
+					<h5>1. Pass the custom url to Smartech SDK</h5>
+					<p>Pass the custom url scheme to the Smartech SDK using the below code snippet. This code should be added in the AppDelegate file of the app.</p>
+					<div class="row my-3">
+						<div class="col-md-6 col-12">
+								<ul class="list list-unstyled pl-0">
+									<li><p>Obejctive C</p><br>
+										<p>Below code to be added in <code>AppDelegate.h</code> file</p>
+										<script src="https://gist.github.com/lolbidoll/bda09587467b3c265e2208d90fff2ba4.js"></script>
+									</li>
+									
+								</ul>
+							</div>
+							<div class="col-md-6 col-12">
+								<ul class="list list-unstyled pl-0">
+									<li><p>Swift</p><br>
+										<p>Below code to be added in <code>AppDelegate.swift</code> file</p>
+										<script src="https://gist.github.com/lolbidoll/f0d6ca3db810bf376dd2e55b17da89b0.js"></script>
+								</li>
+								</ul>
+							</div>
+						</div>
+				<p>If your app has opted into Scenes, please refer to below code snippets. This code should be added in the SceneDelegate file of the app.</p>
+				<div class="row my-3">
+					<div class="col-md-6 col-12">
+							<ul class="list list-unstyled pl-0">
+								<li><p>Obejctive C</p><br>
+									<p>Below code to be added in <code>SceneDelegate.h</code> file</p>
+									<script src="https://gist.github.com/lolbidoll/350e58d8d0626b1225452971f2221f2f.js"></script>
+								</li>
+								
+							</ul>
+						</div>
+						<div class="col-md-6 col-12">
+							<ul class="list list-unstyled pl-0">
+								<li><p>Swift</p><br>
+									<p>Below code to be added in <code>SceneDelegate.swift</code> file</p>
+									<script src="https://gist.github.com/lolbidoll/5d10b863250a7936b44bcee4b8c5de7e.js"></script>
+							</li>
+							</ul>
+						</div>
+					</div>
+
+					<h5>2. Add URL schemas in URL Types</h5>
+						<div class="col-12 col-md">
+							<a href="https://ibb.co/d4Rs3Gt"><img class="figure-img img-fluid shadow rounded" src="https://i.ibb.co/Zz0RwWS/urlType.png" alt="" title=""/></a>
+						</div><br>
+						<h5>3. Add the same URL scheme in PX panel</h5>
+						<div class="col-12 col-md">
+							<a href="https://ibb.co/s94Dwqz"><img class="figure-img img-fluid shadow rounded" src="https://i.ibb.co/N2qkjKb/Screenshot-2024-01-03-at-5-54-07-PM.png" alt="" title=""/></a>
+						</div>
+						
+			</section><!--//section-->
+					
+			    </article><!--//docs-article-->
+			    
+			    
+		        <article class="docs-article" id="item-5-2">
+				    <header class="docs-header">
+				
+					    <section class="docs-intro">
+						    <h2 class="section-heading">Updating Capabilities</h2>
+							<p>In Xcode target, go to Signing & Capabilities, and click on "+Capability" as shown below, if you do not have any "Keychain Groups" setup. If you do, you can directly proceed to the next step.</p>
+							<div class="simplelightbox-gallery row mb-3">
+								<div class="col-12 col-md-4 mb-3">
+									<a href="https://files.readme.io/280bc04-Screenshot_2019-10-01_at_2.01.24_PM.png"><img class="figure-img img-fluid shadow rounded" src="https://files.readme.io/280bc04-Screenshot_2019-10-01_at_2.01.24_PM.png" alt="" title="CoderPro Home Page"/></a>
+								</div>
+								<div class="col-12 col-md-4 mb-3">
+									<a href="https://files.readme.io/981aa96-Screenshot_2019-10-01_at_2.02.53_PM.png"><img class="figure-img img-fluid shadow rounded" src="https://files.readme.io/981aa96-Screenshot_2019-10-01_at_2.02.53_PM.png" alt="" title="CoderPro Features Page"/></a>
+								</div><!--//col-->
+								
+							</div><!--//gallery-->
+						<p>Add a new Keychain Group (as shown below) and enter <b>hansel_public_key</b> (Hansel uses KeyChain Sharing for decryption of Hansel SDK's responses)</p>
+						
+					</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-6-1">
+						<h2 class="section-heading">Configure Apps Info.plist with Hansel Keys</h2>
+						<p>You need to add a key named HanselKeys with type Dictionary. Init add the following keys and values with their types</p>
+					<p>Following is the source code snippet of apps Info.plist for key Hansel Keys:</p>
+					<script src="https://gist.github.com/lolbidoll/18de384aa8adb390d0e9e5d1de3b23c3.js"></script>
+					<p>Following is the image representation of apps Info.plist for key HanselKeys:</p>
+					<div class="col-12 col-md">
+						<a href="https://files.readme.io/67f9404-Screenshot_2021-01-07_at_2.49.13_PM.png"><img class="figure-img img-fluid shadow rounded" src="https://files.readme.io/67f9404-Screenshot_2021-01-07_at_2.49.13_PM.png" alt="" title="CoderPro Features Page"/></a>
+					</div>
+				</section><!--//section-->
+					
+					<section class="docs-section" id="item-5-3">
+						<h2 class="section-heading">User Tracking for Nudges</h2>
+						<p>If you want to keep user profile data at the client-side and use this information to target specific user ids, please follow the below steps.</p>
+						<div class="callout-block callout-block-success">
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder me-1">
+										<i class="fas fa-thumbs-up"></i>
+									</span><!--//icon-holder-->
+									
+								</h4>
+								<p>Client side user profile data is local to the device and none of the PII Information is shared back to Netcore servers.</p>
+							</div><!--//content-->
+						</div>
+						<h5>Setting user ID</h5>
+						<p>This is a pre-defined attribute that can be the user's email id, account id, or any other identifier that you use to uniquely identify a user. If not set, CEE SDK will generate a device-specific unique string to uniquely identify the app user.</p>
+						<script src="https://gist.github.com/lolbidoll/45774e07bab82eb4109e7a8543549d2e.js"></script>
+				
+					
+				<h5>Clear Identity</h5>
+				<p>This will clear the user’s identity and after this, all activity will be tracked as anonymous.</p>
+				<script src="https://gist.github.com/lolbidoll/63782c2d241853828ff43ebfc433d372.js"></script>
+				<br><h5>Custom Attributes</h5>
+			
+			<p>Custom Attributes allow you to target users based on any data that you want. For example, to set a value for a custom attribute called “age”, you need to do the following:</p>
+			
+			<script src="https://gist.github.com/lolbidoll/0508791d576335b205ca810c3e768b17.js"></script>
+		</section><!--//section-->
+					
+					<section class="docs-section" id="item-6-3">
+							<h2 class="section-heading">Event Listener</h2>
+						<p>Add the below code in AppDelegate class so that the events will be automatically sent to CEE</p>
+						<script src="https://gist.github.com/lolbidoll/d1cd3ef565386d1e6b092baca6782a19.js"></script>
+					<br><p>Below is the Flutter code for Event Listener</p>
+					<script src="https://gist.github.com/lolbidoll/151059890cdf377fc0062d5cca70f337.js"></script>
+					<br>
+					<p>Registering the listener with Product Experience SDK on app initialisation.</p>
+
+					<script src="https://gist.github.com/lolbidoll/33821997085b9a928a89bd8cb75c289d.js"></script><br>
+				</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    
+			    <article class="docs-article" id="section-7">
+				    
+				     <section class="docs-section" id="item-7-1">
+						<h2 class="section-heading">Nudges - Defining Actions & Handling Deeplinks</h2>
+						<p>Please follow the below steps if you want to receive a callback whenever an action has been invoked from a Nudge. This guide will help you implement listeners and register them with Product Experience SDK.</p>
+						<p>Product Experience SDK will invoke the method in the registered listener whenever an action has been triggered. You can add additional logic in this method to perform any relevant tasks related to the action.</p>
+					<h5>Step 1:</h5>
+					<p>Create a class implementing <code>PxActionListener</code> interface and implement the following method:</p>
+					<script src="https://gist.github.com/lolbidoll/14ea514e6839876dc4b68e4b9d4586e6.js"></script>
+				<br>
+				<h5>Step 2:</h5>
+				<p>Register the <code>PxActionListener</code> with the Product Experience SDK using the following code:</p>
+				<p>Every listener should be associated with a specific action. This gives you the flexibility to add different listeners for different actions. If you wish to add the same listener for all the actions, then register the same listener for all the actions separately.</p>
+				<script src="https://gist.github.com/lolbidoll/9f6ef00aa873daf6ff75bac2ed61df05.js"></script>
+			<br>
+			<h5>Step 3:</h5>
+			<p>Register listener for actions from Test Device:</p>
+			<p>Ensure that you register the listeners for actions which you added in Steps 1 and 2, from a test device. This can be done by invoking all the flows within the app, where the action listeners have been registered. To learn more on setting up test device, please <a href="https://cedocs.netcorecloud.com/docs/android-sdk-product-experience-setting-up-test-devices">click here</a>.</p>
+			<p>Once you have done the above changes, registered actions will be populated on the Hansel panel.</p>
+		<br><h2>Handling Deeplink from Launch URL option</h2>
+		<p>Please follow the below steps if you want to receive a callback for Button Action Launch Url whenever a button is clicked. This guide will help you register and implement a listener with the Product Experience SDK.</p>
+	<p>Register the HanselDeepLinkListener in your main.dart class with the Product Experience SDK using the following code:</p>
+	<script src="https://gist.github.com/lolbidoll/7d02260c7cc82a10a8401caae6bdc65b.js"></script>
+	<br>
+	<p>For example, in the below screenshot, the URL parameter will have the value http://www.google.com<br>
+		Note: Registering DeepLinkListener for the "Launch Url" option, will override the default behavior of launch URL option for all nudges.</p>
+	
+		<div class="col-12 col-md">
+			<a href="https://files.readme.io/4aa1394-Screenshot_2022-07-18_at_9.51.20_AM.png"><img class="figure-img img-fluid shadow rounded" src="https://files.readme.io/4aa1394-Screenshot_2022-07-18_at_9.51.20_AM.png" alt="" title="CoderPro Features Page"/></a>
+		</div>
+	</section><!--//section-->
+					
+					<section class="docs-section" id="item-7-2">
+						<h2 class="section-heading">Using existing analytics events for triggers and goals</h2>
+						<p>You can use the analytics events of any of the following vendors as triggers for the Product Experience. These events can also be used as goal events.</p>
+					<p>Please note that the goal events sent to these analytics providers will have the below system parameters in addition to parameters that you will configure. These can be used to filter goal events data specific to an interaction map name and branch where the user falls into.</p>
+					<script src="https://gist.github.com/lolbidoll/6360a4535bfdccae71f43b5821a682e2.js"></script>
+				<br>
+				<h5>For Netcore Cloud:</h5>
+				<script src="https://gist.github.com/lolbidoll/38600fbac7fa5ed84e035406ca00f7a3.js"></script>
+				<br>
+				</section><!--//section-->
+					
+					<section class="docs-section" id="item-7-3">
+							<h2 class="section-heading">Handling Invisible Containers</h2>
+						<p>If there is an invisible container, please follow the below steps for Product Experience SDK to ignore that container:</p>
+					<p>We need to add a key to the widget which we want to ignore.</p>
+					<p>key: ValueKey("anything_hsl_ignore");</p>
+					<script src="https://gist.github.com/lolbidoll/b64f3c8fd25209ae57d935981bf8674e.js"></script>
+					<p>In the example we can see we are giving the key in list of sliverList which we want to ignore</p>
+				
+				
+				</section><!--//section-->
+
+				<section class="docs-section" id="item-7-4">
+					<h2 class="section-heading">Nudges on Scrollable Widgets</h2>
+
+				<p>There are list of widgets which are scrollable in flutter - <a href="https://docs.flutter.dev/ui/widgets/scrolling">List</a>.</p>
+				<p>We need to add a key to the widget which we want to ignore.</p>
+			<p>key: ValueKey("anything_hsl_ignore");</p>
+			<script src="https://gist.github.com/lolbidoll/b64f3c8fd25209ae57d935981bf8674e.js"></script>
+			<p>In the example we can see we are giving the key in list of sliverList which we want to ignore</p>
+		<p>(CustomScrollView, DraggableScrollableSheet, GridView, ListView, NestedScrollView, NotificationListener, PageView,
+
+			RefreshIndicator, ReorderableListView, ScrollConfiguration, Scrollable, Scrollbar, SingleChildScrollView)</p>
+		<p>For Nudges to be attached on a scroll type or scrollable widgets, We have to add a Key Property in the Widget with <b>ValueKey(“UniqueString”)</b> or <b>ObjectKey("UniqueString")</b></p>
+		<script src="https://gist.github.com/lolbidoll/f50e6c2653fb22e313bc2113295ddee6.js"></script>	
+	</section><!--//section-->
+
+	<section class="docs-section" id="item-295">
+		<h2>Enable PX logs</h2><br>
+		<h5>1. Enable PX logs</h5>
+		<p>please add below code in didFinishLaunchingWithOptions method of AppDelegate class</p>
+		<div class="row my-3">
+			<div class="col-md-6 col-12">
+					<ul class="list list-unstyled pl-0">
+						<li><p>Obejctive C</p><br>
+							<script src="https://gist.github.com/lolbidoll/b9ecb33e7cdc4ac843b4ce09ce7293c3.js"></script>
+						</li>
+						
+					</ul>
+			</div>
+				<div class="col-md-6 col-12">
+					<ul class="list list-unstyled pl-0">
+						<li><p>Swift</p><br>
+							<script src="https://gist.github.com/lolbidoll/f6482e82d74f03a1baec62eb87cce761.js"></script>
+						</li>
+					</ul>
+				</div>
+		</div>
+	</section>
+			    </article><!--//docs-article-->
+			   
+			    <footer class="footer">
+				    <div class="container text-center py-5">
+				  
+				    </div>
+			    </footer>
+		    </div> 
+	    </div>
+    </div><!--//docs-wrapper-->
+   
+</div>    
+    <!-- Javascript -->          
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    <script>
+		function myFunction() {
+			var input, filter, ul, li, a, i, txtValue;
+			input = document.getElementById("myInput");
+			filter = input.value.toUpperCase();
+			ul = document.getElementById("myUL");
+			li = ul.getElementsByTagName("li");
+			for (i = 0; i < li.length; i++) {
+				a = li[i].getElementsByTagName("a")[0];
+				txtValue = a.textContent || a.innerText;
+				if (txtValue.toUpperCase().indexOf(filter) > -1) {
+					li[i].style.display = "";
+				} else {
+					li[i].style.display = "none";
+				}
+			}
+		}
+		</script>
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script> 
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="assets/js/docs.js"></script> 
+
+</body>
+</html> 
+
